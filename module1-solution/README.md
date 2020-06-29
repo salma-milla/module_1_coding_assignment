@@ -1,2 +1,2 @@
-# module_1_coding_assignment
-Coding assignment for the course "Single page web applications with AngularJS"
+# module-solution
+Coding assignment solution for the module 1 of the course "Single page web applications with AngularJS"
