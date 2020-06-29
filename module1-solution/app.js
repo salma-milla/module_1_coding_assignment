@@ -34,24 +34,22 @@
       var lunchItems = items.split(",");
       var invalidDoubleCommaItems = items.split(",,");
       var invalidCommaSpaceCommaItems = items.split(", ,");
-      var invalidCommaSpaceItems = items.split(", ");
       var totalLunchItems = lunchItems.length -
                             (invalidDoubleCommaItems.length - 1) -
-                            (invalidCommaSpaceCommaItems.length - 1) -
-                            (invalidCommaSpaceItems.length - 1);
+                            (invalidCommaSpaceCommaItems.length - 1);
+
       if((invalidDoubleCommaItems.length - 1) >= 1 ||
          (invalidCommaSpaceCommaItems.length - 1) >= 1 ||
-         (invalidCommaSpaceItems.length - 1) >= 1 ||
          (lunchItems[lunchItems.length - 1]) == "")
         exception_message = "NOT considered an empty item, (e.i. , ,) for the count";
+
       if(lunchItems[lunchItems.length - 1] == "")
         totalLunchItems = totalLunchItems - 1;
-      if (totalLunchItems <= 3){
+
+      if (totalLunchItems <= 3)
         return ["Enjoy!", exception_message, "#64b92d", "#64b92d"];
-      }
-      else if (totalLunchItems > 3){
+      else if (totalLunchItems > 3)
         return ["Too much!", exception_message, "#64b92d", "#64b92d"];
-      }
     }
   }
 })();
